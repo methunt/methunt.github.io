@@ -325,24 +325,41 @@
   <h2 class="reveal">Featured <span>Projects</span></h2>
   <p class="lede reveal">Tools built to solve real problems on the WPP data platform, open-sourced and runnable on sample/seed data.</p>
   <div class="project-grid">
-
     <div class="project-card reveal">
       <div class="project-visual">
-        <svg viewBox="0 0 260 150"><defs><linearGradient id="g1" x1="0" x2="0" y1="1" y2="0"><stop offset="0%" stop-color="#22d3ee"/><stop offset="100%" stop-color="#818cf8"/></linearGradient></defs>
-        <g fill="url(#g1)" opacity=".92">
-          <rect x="30" y="90" width="22" height="40" rx="3"/><rect x="65" y="60" width="22" height="70" rx="3"/>
-          <rect x="100" y="100" width="22" height="30" rx="3"/><rect x="135" y="40" width="22" height="90" rx="3"/>
-          <rect x="170" y="75" width="22" height="55" rx="3"/><rect x="205" y="55" width="22" height="75" rx="3"/>
-        </g>
-        <line x1="20" y1="132" x2="240" y2="132" stroke="#2a3040" stroke-width="1"/></svg>
+        <svg viewBox="0 0 260 150">
+          <rect x="24" y="34" width="46" height="22" rx="3" fill="#2a3245"/><text x="30" y="48" font-family="monospace" font-size="8" fill="#8b93a7">bronze</text>
+          <rect x="107" y="34" width="46" height="22" rx="3" fill="#153a2b"/><text x="113" y="48" font-family="monospace" font-size="8" fill="#34d399">silver</text>
+          <rect x="190" y="34" width="46" height="22" rx="3" fill="#0f1320" stroke="#22d3ee" stroke-width="1.5"/><text x="196" y="48" font-family="monospace" font-size="8" fill="#22d3ee">gold</text>
+          <path d="M70 45h37m0 0-6-5m6 5-6 5" stroke="#3a4258" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M153 45h37m0 0-6-5m6 5-6 5" stroke="#3a4258" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect x="30" y="86" width="200" height="18" rx="9" fill="#2a3245"/>
+          <path d="M40 95h80l14-6 14 12 16-8h50" stroke="#f472b6" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="40" cy="95" r="4" fill="#f472b6"/><circle cx="214" cy="95" r="4" fill="#f472b6"/>
+          <text x="30" y="128" font-family="monospace" font-size="8" fill="#8b93a7">85K trips · metric views · Genie</text>
+        </svg>
       </div>
       <div class="project-body">
-        <h3>BigQuery + dbt Cost Observability</h3>
-        <p>Power BI semantic model over BigQuery job history joined to dbt run metadata — shows exactly where warehouse spend goes. 7-page PBIP project, runs offline on sample data.</p>
-        <a href="https://github.com/methunt/pbi-bigquery-dbt-cost-observability" target="_blank">View on GitHub <span class="arrow">→</span></a>
+        <h3>Fleet Pulse — Trucking Operations on Databricks</h3>
+        <p>Medallion lakehouse over 85K trucking trips (2022–2024): Lakeflow pipelines, governed metric views, a Genie agent answering in natural language, and an AI/BI dashboard — with the finding that pre-aggregated source tables disagree with trip facts by 13.8% on revenue.</p>
+        <a href="https://github.com/methunt/databricks-fleet-lakehouse-genie" target="_blank">View on GitHub <span class="arrow">→</span></a>
       </div>
     </div>
-
+    <div class="project-card reveal d2">
+      <div class="project-visual">
+        <svg viewBox="0 0 260 150">
+          <rect x="24" y="35" width="212" height="12" rx="2" fill="#4c1d24"/><text x="30" y="44" font-family="monospace" font-size="9" fill="#f87171">- SELECT * FROM src</text>
+          <rect x="24" y="52" width="212" height="12" rx="2" fill="#153a2b"/><text x="30" y="61" font-family="monospace" font-size="9" fill="#34d399">+ MERGE INTO target</text>
+          <rect x="24" y="69" width="212" height="12" rx="2" fill="#153a2b"/><text x="30" y="78" font-family="monospace" font-size="9" fill="#34d399">+ USING changed_rows</text>
+          <rect x="24" y="86" width="212" height="12" rx="2" fill="#2a3245"/><text x="30" y="95" font-family="monospace" font-size="9" fill="#8b93a7">  collate: ci_text</text>
+        </svg>
+      </div>
+      <div class="project-body">
+        <h3>dbt Custom Macros for BigQuery</h3>
+        <p>Two opt-in macros overriding the BigQuery adapter: change-aware MERGE that skips unchanged rows, and native collation for case-insensitive filters/joins — no more UPPER()/LOWER().</p>
+        <a href="https://github.com/methunt/dbt-custom-macros" target="_blank">View on GitHub <span class="arrow">→</span></a>
+      </div>
+    </div>
     <div class="project-card reveal d1">
       <div class="project-visual">
         <svg viewBox="0 0 260 150">
@@ -361,23 +378,6 @@
         <a href="https://github.com/methunt/dbt-bigquery-cost-observability-template" target="_blank">View on GitHub <span class="arrow">→</span></a>
       </div>
     </div>
-
-    <div class="project-card reveal d2">
-      <div class="project-visual">
-        <svg viewBox="0 0 260 150">
-          <rect x="24" y="35" width="212" height="12" rx="2" fill="#4c1d24"/><text x="30" y="44" font-family="monospace" font-size="9" fill="#f87171">- SELECT * FROM src</text>
-          <rect x="24" y="52" width="212" height="12" rx="2" fill="#153a2b"/><text x="30" y="61" font-family="monospace" font-size="9" fill="#34d399">+ MERGE INTO target</text>
-          <rect x="24" y="69" width="212" height="12" rx="2" fill="#153a2b"/><text x="30" y="78" font-family="monospace" font-size="9" fill="#34d399">+ USING changed_rows</text>
-          <rect x="24" y="86" width="212" height="12" rx="2" fill="#2a3245"/><text x="30" y="95" font-family="monospace" font-size="9" fill="#8b93a7">  collate: ci_text</text>
-        </svg>
-      </div>
-      <div class="project-body">
-        <h3>dbt Custom Macros for BigQuery</h3>
-        <p>Two opt-in macros overriding the BigQuery adapter: change-aware MERGE that skips unchanged rows, and native collation for case-insensitive filters/joins — no more UPPER()/LOWER().</p>
-        <a href="https://github.com/methunt/dbt-custom-macros" target="_blank">View on GitHub <span class="arrow">→</span></a>
-      </div>
-    </div>
-
     <div class="project-card reveal">
       <div class="project-visual">
         <svg viewBox="0 0 260 150">
@@ -394,7 +394,22 @@
         <a href="https://github.com/methunt/lineage-tracer" target="_blank">View on GitHub <span class="arrow">→</span></a>
       </div>
     </div>
-
+    <div class="project-card reveal">
+      <div class="project-visual">
+        <svg viewBox="0 0 260 150"><defs><linearGradient id="g1" x1="0" x2="0" y1="1" y2="0"><stop offset="0%" stop-color="#22d3ee"/><stop offset="100%" stop-color="#818cf8"/></linearGradient></defs>
+        <g fill="url(#g1)" opacity=".92">
+          <rect x="30" y="90" width="22" height="40" rx="3"/><rect x="65" y="60" width="22" height="70" rx="3"/>
+          <rect x="100" y="100" width="22" height="30" rx="3"/><rect x="135" y="40" width="22" height="90" rx="3"/>
+          <rect x="170" y="75" width="22" height="55" rx="3"/><rect x="205" y="55" width="22" height="75" rx="3"/>
+        </g>
+        <line x1="20" y1="132" x2="240" y2="132" stroke="#2a3040" stroke-width="1"/></svg>
+      </div>
+      <div class="project-body">
+        <h3>BigQuery + dbt Cost Observability</h3>
+        <p>Power BI semantic model over BigQuery job history joined to dbt run metadata — shows exactly where warehouse spend goes. 7-page PBIP project, runs offline on sample data.</p>
+        <a href="https://github.com/methunt/pbi-bigquery-dbt-cost-observability" target="_blank">View on GitHub <span class="arrow">→</span></a>
+      </div>
+    </div>
     <div class="project-card reveal d1">
       <div class="project-visual">
         <svg viewBox="0 0 260 150">
@@ -413,7 +428,6 @@
         <a href="https://github.com/methunt/pbir-field-remap-toolkit" target="_blank">View on GitHub <span class="arrow">→</span></a>
       </div>
     </div>
-
     <div class="project-card reveal d2">
       <div class="project-visual">
         <svg viewBox="0 0 260 150">
@@ -430,6 +444,13 @@
         <a href="https://github.com/methunt/pbi-semantic-model-mapping" target="_blank">View on GitHub <span class="arrow">→</span></a>
       </div>
     </div>
+
+
+
+
+
+
+
 
   </div>
 </section>
